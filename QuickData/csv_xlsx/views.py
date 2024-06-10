@@ -24,8 +24,8 @@ def csv_xlsx(request):
             obj = archivo.objects.latest('id')
             obj.save()
             print("Si se subió")
-            ruta = f'\\archivos_csv\\{nombre}.csv'
-            print(ruta)
+            # ruta = f'\\archivos_csv\\{nombre}.csv'
+            # print(ruta)
             time.sleep(3)
             archivo_a_xlsx(nombre)
             return redirect('archivo_ver')
@@ -47,7 +47,7 @@ def archivo_ver(request):
 def descargar_xlsx(request,nombre):
     archivoD = archivo.objects.get(nombre=nombre)
     ruta_actual = os.path.dirname(__file__)
-    ruta_archivo_xlsx = os.path.join(ruta_actual,'archivos_xlsx\\', nombre+".xlsx")
+    ruta_archivo_xlsx = os.path.join(ruta_actual,'archivos_xlsx', nombre+".xlsx")
     print(ruta_archivo_xlsx)
     response = FileResponse(open(ruta_archivo_xlsx, 'rb'))
     response['Content-Type'] ='application/octet-stream'
