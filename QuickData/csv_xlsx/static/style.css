@@ -1,3 +1,35 @@
-* {
-    background-color: blue;
+a:hover {
+    text-decoration: none;
 }
+
+
+body {
+    background-color: #0D0D1D;
+    height: 90vh;
+}
+
+h2,h4,h5 {
+    color: azure;
+}
+
+input {
+    background-color: #232323 !important;
+    color: white !important;
+}
+
+.btn {
+    height: 3.3rem;
+    font-size: 1.5rem;
+}
+
+.bloque-archivo h4{
+    color: gray;
+}
+
+.sec {
+    border-radius: 1rem;
+    border: 1px solid gray;
+    margin: 100px;
+    width: 60%;
+}
+

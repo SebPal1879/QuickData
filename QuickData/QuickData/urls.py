@@ -17,8 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from csv_xlsx import views
-
+from . import views as vw
 urlpatterns = [
+    path('',vw.home,name="home"),
     path('csv_xlsx/',include("csv_xlsx.urls")),
     path('admin/', admin.site.urls),    
 ]

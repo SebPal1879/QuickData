@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 from environs import Env
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +27,7 @@ env.read_env()  # new
 SECRET_KEY = env.str("SECRET_KEY", 'django-insecure-*l^mi1t(yr(2tk3h$w*9)^+m8cx^wpkakb=%jazo7n0)$iy#j8')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = ["https://*.fly.dev"]  

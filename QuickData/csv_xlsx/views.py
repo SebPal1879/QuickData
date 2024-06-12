@@ -53,3 +53,7 @@ def descargar_xlsx(request,nombre):
     response['Content-Type'] ='application/octet-stream'
     response['Content-Disposition'] = f'attachment; filename="{nombre}.xlsx"'
     return response
+
+def si(request):
+
+    return render(request,'debug.html')
